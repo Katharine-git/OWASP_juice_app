@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: juiceapp-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: juiceapp
+  template:
+    metadata:
+      labels:
+        name: juiceapp
+    spec:
+      containers:
+      - name: juicewebapp
+        image: katharinechristine/juice_app:latest
+      
