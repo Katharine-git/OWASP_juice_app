@@ -14,5 +14,6 @@ spec:
     spec:
       containers:
       - name: juicewebapp
-        image: katharinechristine/juice_app:latest
-      
+        image: katharinechristine/juice_app:1.0
+        ports:
+        - containerPort: 3000
